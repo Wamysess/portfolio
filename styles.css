@@ -1,0 +1,140 @@
+/* Custom styles to complement Tailwind */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+body {
+    font-family: 'Inter', sans-serif;
+    scroll-behavior: smooth;
+}
+
+/* Smooth scrolling for anchor links */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Animation for sections */
+section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Custom button animation */
+.btn-hover-effect {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-hover-effect::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: 0.5s;
+}
+
+.btn-hover-effect:hover::after {
+    left: 100%;
+}
+
+/* Project card hover effect */
+.project-card {
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Skill icon animation */
+.skill-icon {
+    transition: transform 0.3s ease;
+}
+
+.skill-item:hover .skill-icon {
+    transform: scale(1.1);
+}
+
+.skill-item:hover {
+    transform: translateY(-5px);
+}
+
+.skill-level {
+    transition: height 0.3s ease;
+}
+
+.skill-item:hover .skill-level {
+    height: 4px;
+}
+
+.skill-percentage {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.skill-item:hover .skill-percentage {
+    opacity: 1;
+}
+
+.skills-slider-container {
+    width: 100%;
+    position: relative;
+}
+.skills-slider-track {
+    display: flex;
+    width: max-content;
+    gap: 1rem;
+}
+.skill-slide {
+    width: 16rem; /* Same as w-64 */
+}
+
+/* Custom styles for the modal */
+#project-modal {
+    transition: opacity 0.3s ease;
+}
+
+#modal-gallery {
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+}
+
+#lightbox-img {
+    transition: transform 0.3s ease;
+}
+
+/* Hide scrollbar but allow scrolling */
+#modal-gallery::-webkit-scrollbar {
+    display: none;
+}
+#modal-gallery {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+#gallery-track {
+    display: flex;
+    height: calc(100% - 120px); /* Account for header/footer */
+    margin-top: 60px; /* Header height */
+    margin-bottom: 60px; /* Footer height */
+}
+
+#gallery-track > div {
+    flex: 0 0 100%;
+}
+
+#gallery-thumbnails {
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE/Edge */
+}
+
+#gallery-thumbnails::-webkit-scrollbar {
+    display: none; /* Chrome/Safari */
+}
