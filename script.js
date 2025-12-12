@@ -269,6 +269,15 @@ const projects = {
             "assets/projects/humidity/1.png",
             "assets/projects/humidity/2.png",   
         ]
+    },
+
+    A1ComputerCorp: {
+        title: "A1ComputerCorp Product Catalog Website",
+        images: [
+            "assets/projects/A1ComputerCorp/1.png",
+            "assets/projects/A1ComputerCorp/2.png",
+            "assets/projects/A1ComputerCorp/3.png",    
+        ]
     }
 };
 
